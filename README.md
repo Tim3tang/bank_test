@@ -30,9 +30,14 @@ Variable name    | Type  		| Comment
 ------------------ | -------------------	| ---------------------------
 Deposit | Number(float) | Amount added to balance  
 Withdrawal | Number(float) | Amount deducted from balance
-Account statement | Number(float), Date | Stores date, amount and balance
+Statement | Number(float), Date | Stores date, amount and balance
 
-
+Class    | Functions  	    	| Comment 
+------------------ | -------------------	| ---------------------------
+Account *changes the balance*  | deposit(*amount, date*)  | adds amount to balance on given date 
+                               | withdrawal(*amount, date*)  | deducts amount from balance on given date
+Bank *displays the statement*  | history(*balance, deposit, withdrawal*)  | stores deposit and withdrawal history
+                               | statement(*account, history*)            | displays account statement 
  
 ## Installation
 
