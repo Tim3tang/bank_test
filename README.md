@@ -1,15 +1,39 @@
 ## Bank Test
 
-[Design](#design) | [Installation](#installation) | [Resources](#resources)
+[Specification](#specification) |[Acceptance criteria](#acceptance criteria) |[Design](#design) | [Installation](#installation) | [Resources](#resources)
 
+## Specification
+
+* Be able to interact with code via IRB.  (You don't need to implement a command line interface that takes input from STDIN.)
+* Deposits, withdrawal.
+* Account statement (date, amount, balance) printing.
+* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+
+### Acceptance criteria
+
+**Given** a client makes a deposit of 1000 on 10-01-2012
+**And** a deposit of 2000 on 13-01-2012
+**And** a withdrawal of 500 on 14-01-2012
+**When** she prints her bank statement
+**Then** she would see
+
+```
+date       || credit || debit   || balance
+14/01/2012 ||        || 500.00  || 2500.00
+13/01/2012 || 2000.00||         || 3000.00
+10/01/2012 || 1000.00||         || 1000.00
+```
 
 ## Design
 
-Project title  | Description  									| Development timeframe | Technologies | Testing
-------------- | ------------------------------	| ------------- |------------- |---------
-[Quizzbuzz](https://github.com/quizzbuzz/quizzbuzz) | A multiplayer general knowledge quiz game. Play [here](https://qzbz.herokuapp.com)! | 10 days | React, Elixir, Phoenix, PostgreSQL| ExUnit, Enzyme, Sinon, Mocha, Chai
-[SpyAPI](https://github.com/spyAPI/spyAPI) | A tool for mocking API requests, to be used during the build and testing of new projects. Try it out [here](https://spy-api.herokuapp.com). | 3 days | Ruby on Rails, PostgreSQL | RSpec, Capybara
+Variable name    | Type  		| Comment
+------------------ | -------------------	| ---------------------------
+Deposit | Number(float) | Amount added to balance  
+Withdrawal | Number(float) | Amount deducted from balance
+Account statement | Number(float), Date | Stores date, amount and balance
 
+
+ 
 ## Installation
 
 ## Resources
